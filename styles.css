@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+* {
+  margin: 0;
+
+  box-sizing: border-box;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+:root {
+  /* ### Primary */
+
+  --pale-blue: hsl(225, 100%, 94%);
+  --bright-blue: hsl(245, 75%, 52%);
+  /* #neutral */
+  --very-pale-blue: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+body {
+  background-color: var(--pale-blue);
+  font-family: "Red Hat Display", sans-serif;
+  /* max-height: 100vh; */
+}
+h1,
+h4 {
+  color: var(--dark-blue);
+}
+p {
+  font-size: 16px;
+  font-weight: lighter;
+  color: var(--desaturated-blue);
+}
+.bg__image {
+  background: url("./images/pattern-background-desktop.svg") no-repeat center/cover;
+  height: 65vh;
+  position: absolute;
+  top: -10vh;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+}
+.order-card {
+  margin: 50px;
+  max-width: 450px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px hsla(224, 23%, 55%, 0.5);
+}
+
+#hero-image {
+  border-radius: 10px 10px 0 0;
+}
+
+.text-content {
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.text-content > * {
+  margin: 10px 0;
+}
+.text-content p {
+  text-align: center;
+}
+.plan {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  background-color: var(--very-pale-blue);
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 10px;
+}
+#music-icon {
+  margin: 0 10px;
+}
+
+.plan article {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.link {
+  color: var(--bright-blue);
+  font-weight: bold;
+}
+.btn {
+  font-family: inherit;
+  width: 100%;
+  padding: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.btn-primary {
+  background-color: var(--bright-blue);
+  color: #fff;
+  box-shadow: 0 20px 20px hsla(224, 23%, 55%, 0.5);
+}
+.btn-sec {
+  background-color: transparent;
+  color: var(--desaturated-blue);
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    background: black;
+  }
+  .order-card {
+    width: 80%;
+  }
+  #hero-image {
+    max-width: 100%;
+  }
+}
