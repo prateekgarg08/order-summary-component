@@ -21,6 +21,11 @@
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
 }
+h1,
+h4 {
+  color: var(--dark-blue);
+}
+
 body {
   background-color: var(--pale-blue);
   font-family: "Red Hat Display", sans-serif;
@@ -84,11 +89,18 @@ p {
   width: 100%;
   background-color: var(--very-pale-blue);
   justify-content: space-between;
-  padding: 10px;
+  padding: 10px 20px;
   border-radius: 10px;
 }
+#plan-details {
+  margin-left: 10px;
+}
+#plan-details > * {
+  margin: 5px 0;
+  text-align: left;
+}
 #music-icon {
-  margin: 0 10px;
+  margin: 0 10px 0 5px;
 }
 
 .plan article {
@@ -119,15 +131,69 @@ p {
   background-color: transparent;
   color: var(--desaturated-blue);
 }
+.link:hover {
+  text-decoration: none;
+  color: hsla(245, 75%, 52%, 0.8);
+}
+.btn-primary:hover {
+  background-color: hsla(245, 75%, 52%, 0.8);
+}
+.btn-sec:hover {
+  color: var(--dark-blue);
+}
 
-@media screen and (max-width: 480px) {
-  body {
-    background: black;
-  }
+@media screen and (max-width: 768px) {
   .order-card {
     width: 80%;
   }
+  .text-content {
+    padding: 20px;
+  }
   #hero-image {
     max-width: 100%;
+  }
+  #title {
+    font-size: 25px;
+  }
+  .plan {
+    padding: 10px;
+  }
+  .plan-title {
+    font-size: 16px;
+  }
+  #plan-details {
+    margin: 0;
+  }
+  #plan-details > * {
+    margin: 2px 0;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .order-card {
+    width: 80%;
+  }
+  .text-content {
+    padding: 20px;
+  }
+  #hero-image {
+    max-width: 100%;
+  }
+  #title {
+    font-size: 25px;
+  }
+  .plan {
+    padding: 10px;
+  }
+  .plan-title {
+    font-size: 16px;
+  }
+  #plan-details {
+    margin: 0;
+  }
+  #plan-details > * {
+    margin: 2px 0;
+    text-align: left;
   }
 }
